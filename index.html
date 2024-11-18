@@ -3,14 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A fun and interactive memory matching game. Test your memory skills with this classic card game!">
   <title>Memory Game</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Memory Game</h1>
-  <button id="restart">Restart Game</button>
-  <div class="game-board" id="gameBoard"></div>
+  <main class="container">
+    <header>
+      <h1>Memory Game</h1>
+      <p id="gameStatus" aria-live="polite">Match all the pairs to win the game!</p>
+    </header>
+    <section>
+      <button id="restart" aria-label="Restart the game to play again">Restart Game</button>
+    </section>
+    <section class="game-board" id="gameBoard" aria-label="Game board with memory cards"></section>
+  </main>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
