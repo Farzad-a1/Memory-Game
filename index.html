@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f7f2" />
+    <meta name="description" content="A calm, colorful memory card matching game." />
+    <title>Little Moments — Memory Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Little Moments home">
+          <span class="brand-mark" aria-hidden="true">✳</span>
+          <span>little moments</span>
+        </a>
+        <span class="topbar-note"><span class="sparkle" aria-hidden="true">✦</span> a tiny brain break</span>
+      </header>
+
+      <section class="game" aria-labelledby="game-title">
+        <div class="intro">
+          <p class="eyebrow"><span class="eyebrow-line"></span> THE MEMORY GAME <span class="eyebrow-line"></span></p>
+          <h1 id="game-title">Find your <span>little</span> matches.</h1>
+          <p class="subtitle">Turn over two cards and see what goes together.</p>
+        </div>
+
+        <div class="game-panel">
+          <div class="scorebar" aria-label="Game statistics">
+            <div class="stat"><span class="stat-icon move-icon" aria-hidden="true">↗</span><span><span class="stat-label">MOVES</span><strong id="moves">0</strong></span></div>
+            <div class="stat"><span class="stat-icon time-icon" aria-hidden="true">◷</span><span><span class="stat-label">TIME</span><strong id="timer">00:00</strong></span></div>
+            <div class="stat progress-stat"><span class="stat-icon pair-icon" aria-hidden="true">♡</span><span><span class="stat-label">MATCHED</span><strong><span id="matched">0</span><span class="stat-total"> / 8</span></strong></span></div>
+            <button class="restart-button" id="restart" type="button"><span aria-hidden="true">↻</span> Restart</button>
+          </div>
+
+          <div class="board" id="board" role="group" aria-label="Memory card board"></div>
+          <p class="helper" id="game-status" aria-live="polite">Pick a card to get started <span aria-hidden="true">✦</span></p>
+        </div>
+        <p class="footer-note">Take your time. The little things are worth noticing.</p>
+      </section>
+    </main>
+
+    <div class="win-overlay" id="win-overlay" hidden>
+      <section class="win-card" role="dialog" aria-modal="true" aria-labelledby="win-title" aria-describedby="win-copy">
+        <div class="win-confetti" aria-hidden="true">✦　✿　✧</div>
+        <div class="win-illustration" aria-hidden="true">🌷</div>
+        <p class="eyebrow">WELL DONE</p>
+        <h2 id="win-title">A lovely little win.</h2>
+        <p id="win-copy">You found all the pairs in <strong id="final-moves">0 moves</strong> and <strong id="final-time">00:00</strong>.</p>
+        <button class="play-again-button" id="play-again" type="button">Play again <span aria-hidden="true">↗</span></button>
+      </section>
+    </div>
+  </body>
+</html>
+
